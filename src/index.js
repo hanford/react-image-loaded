@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { Motion, spring, presets } from 'react-motion'
+import { Motion, spring } from 'react-motion'
 
 import document from 'global/document'
 
@@ -19,11 +19,15 @@ export class ImageLoader extends PureComponent {
   }
 
   render () {
-      const { url, className } = this.props
+      const { url, className, opacity } = this.props
       const { isImgLoaded } = this.state
 
       return (
-        <Motion style={{imgSpring: spring(isImgLoaded ? 1 : 0.7, presets.wobbly), imgOpa: spring(isImgLoaded ? 1 : 0)}}>
+        <Motion style={{
+            imgSpring: spring(isImgLoaded ? 1 : 0.7),
+            imgOpa: spring(opacity !== false ? (isImgLoaded ? 1 : 0) : 1)
+          }}
+        >
           {({ imgSpring, imgOpa }) => (
             <img className={className} src={url} style={{transform: `scale(${imgSpring})`, opacity: imgOpa}}/>
           )}

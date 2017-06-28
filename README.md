@@ -26,6 +26,7 @@ render () {
   return (
     <ImageLoader
       className={style.image}
+      opacity={true}
       url='http://via.placeholder.com/200x200'
     />
   )
