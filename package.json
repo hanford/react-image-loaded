@@ -1,6 +1,6 @@
 {
   "name": "react-image-loaded",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Image loaded animation component",
   "main": "./dist/react-image-loaded.min.js",
   "repository": {
