@@ -9,7 +9,11 @@
 ## Install
 
 ```
-$ npm i react-image-loaded --save
+/* ReactJS */
+$ npm i react-image-loaded react-motion --save
+
+/* PreactJS */
+$ npm i react-image-loaded preact-motion --save
 ```
 
 
